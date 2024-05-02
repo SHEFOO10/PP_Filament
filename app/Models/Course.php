@@ -35,4 +35,8 @@ class Course extends Model
     {
         return $this->duration % 60; // Get remaining minutes
     }
+
+    public function enrollments() {
+        return $this->belongsToMany(User::class, 'enrollments');
+    }
 }

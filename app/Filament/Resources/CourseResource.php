@@ -86,9 +86,13 @@ class CourseResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\explore_courses::route('/'),
+            'index' => Pages\ListCourses::route('/'),
             'create' => Pages\CreateCourse::route('/create'),
             'edit' => Pages\EditCourse::route('/{record}/edit'),
+            'explore' => Pages\explore_courses::route('/explore'),
+            'view' => Pages\ViewCourse::route('/{id}/view'),
+            'my_courses' => Pages\MyCourses::route('/mycourses'),
+            'learn' => Pages\CourseLearn::route('/{id}/learn')
         ];
     }
 }
